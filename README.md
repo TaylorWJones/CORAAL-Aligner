@@ -31,7 +31,6 @@ NORTHEAST N AO2 TH IY1 S
 
 NORTHEAST N AO2 F IY1 S 
 
-For this particular example, the last pronunciation is what was actually said --- but CORAAL1 will 'find' an R and a T, and will assign
-F as TH. CORAAL2 should  correctly categorize the consonants here too.
+For this particular example, in one token the last pronunciation is what was actually said --- but CORAAL1 will 'find' an R and a T, and will assign F as TH. CORAAL2 should  correctly categorize the consonants here too.
 
 The code used to make the new pronouncing dictionary will be shared as AAL.py
