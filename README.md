@@ -1,11 +1,13 @@
 # CORAAL-Aligner
+
+Existing forced alignment performs notoriously poorly on African American Langauge (AAL, alternately 'African American English', AAE), in part English forced aligners are generally not trained on AAL, and in part because pronunciations in the pronouncing dictionaries used to train such aligners are based on "standard" (e.g., white) English pronunciations. 
+
 This repository will, when finished, have two pretrained forced alignment models for use with the Montreal Forced Aligner,
 for speech in African American Language (AAL). Both models are trained on both the 1972 CORAAL (Washington) DC A and the 
-2016 CORAAL (Washington) DC B interviews. The first model, CORAAL1.zip, is trained using the standard CMU Dictionary and phoneset. 
+2016 CORAAL (Washington) DC B interviews. The first model, CORAAL1.zip, is trained using the standard CMU Dictionary and phoneset. It performs quite well at finding correct word-level boundaries, however it has shortcomings with regards to AAL. Specifically, because it is looking for 'standard' pronunciations, it "finds" segments that may (1) not actually be present (e.g., "finding" an /r/ that was either vocalized or deleted), or (2) may be different in AAL (e.g., th-fronting that yields F AA1 V AH0 for "FATHER"). 
 
 The second model, CORAAL2.zip, is trained using a novel phoneset that includes nasalized vowels (e.g., in
-addition to strings like 'IH1 N', there is also 'IH~'). The model takes into account AAL phonology, and so has novel pronunciations 
-*in addition* to the CMU Dictionary pronunciations. Phonological processes accounted for in the CORAAL2.zip model are:
+addition to strings like 'IH1 N', there is also 'IH~'), and includes AAL specific pronunciations. The model takes into account AAL phonology, and so has novel pronunciations *in addition* to the CMU Dictionary pronunciations. Phonological processes accounted for in the CORAAL2.zip model are:
 
 - postvocalic r vocalization/deletion
 - postvocalic l vocalization/deletion
@@ -38,6 +40,8 @@ NORTHEAST N AO2 F IY1 S
 
 For this particular example, in one token the last pronunciation is what was actually said --- but CORAAL1 will 'find' an R and a T, and will assign F as TH. CORAAL2 should  correctly categorize the consonants here too.
 
-The code used to make the new pronouncing dictionary will be shared as AAL.py
+The code used to make the new pronouncing dictionary will be shared as an iPython notebook, allowing anyone to write their own script to modify the pronouncing dictionary used.
 
 The dictionary is shared as AAL.dict.
+
+
