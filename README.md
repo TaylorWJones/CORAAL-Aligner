@@ -44,4 +44,6 @@ The code used to make the new pronouncing dictionary will be shared as an iPytho
 
 The dictionary is shared as AAL.dict.
 
+**NOTE:** This is a work in progress. I have shared the current dictionary and aligner, but depending on your needs they may not be suitable without modification. At the moment, the classification of l-vocalization may need work (it seems to be picking up on a dark/light contrast, cf. Liberman & Yuan 2009), and the classification of nasalized versus oral vowels may need further work (the current iteration gives a choice between PIN P IH1 N and PIN P IH1~, however it may be more profitable in the future to also have PIN P IH1~ N).
+
 
