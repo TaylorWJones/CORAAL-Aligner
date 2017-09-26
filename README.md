@@ -15,9 +15,7 @@ addition to strings like 'IH1 N', there is also 'IH~'), and includes AAL specifi
 - TH fronting
 - post- and intervocalic v deletion
 - vowel nasalization
-- TH deletion in "them"
-- sibilant fortition (wasn't --> wadn't) (to come)
-- word/syllable final obstruent deletion/debuccalization (to come)
+- word/syllable final obstruent deletion/debuccalization
 
 For example, in addition to the CMU Dictionary pronunciation of "northeast":
 
@@ -42,7 +40,7 @@ For this particular example, in one token the last pronunciation is what was act
 
 The code used to make the new pronouncing dictionary will be shared as an iPython notebook, allowing anyone to write their own script to modify the pronouncing dictionary used.
 
-The dictionary is shared as AAL.dict.
+The dictionary is shared as CORAAL_DC.dict.
 
 **NOTE:** This is a work in progress. I have shared the current dictionary and aligner, but depending on your needs they may not be suitable without modification. At the moment, the classification of l-vocalization may need work (it seems to be picking up on a dark/light contrast, cf. Liberman & Yuan 2009), and the classification of nasalized versus oral vowels may need further work (the current iteration gives a choice between PIN P IH1 N and PIN P IH1~, however it may be more profitable in the future to also have PIN P IH1~ N).
 
